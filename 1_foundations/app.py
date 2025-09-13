@@ -15,7 +15,6 @@ def push(text):
             "token": os.getenv("PUSHOVER_TOKEN"),
             "user": os.getenv("PUSHOVER_USER"),
             "message": text,
-        print("ahahha"):
         }
     )
 
@@ -124,6 +123,7 @@ If the user is engaging in discussion, try to steer them towards getting in touc
                 results = self.handle_tool_call(tool_calls)
                 messages.append(message)
                 messages.extend(results)
+                print("ahahha")
             else:
                 done = True
         return response.choices[0].message.content
